@@ -1,0 +1,104 @@
+<div class="componentsContainer logs-container">
+  <div class="logContainer" *ngFor="let process of pm2Data?.processes;let i=index;">
+    <div class="logHeader">
+      <div class="serverTitle">
+        <span>
+          <img src="/assets/images/exchange.jpg">
+        </span>
+        Server id
+        <span>{{process?.pm_id}}</span>
+        <span class="server-name" Name of Server>{{process?.name}}</span>
+      </div>
+      <div class="serverIpDetails">
+        <span class="block-bar">Public IP:180.151.224.162</span>
+        <span class="block-bar">PRIVATE IP:192.168.4.96</span>
+        <span class="block-bar">Host Name:{{process?.username}}</span>
+        <button class="block-btn">x &nbsp;Delete Server</button>
+      </div>
+    </div>
+    <div class="logContent">
+      <div class="contentRow">
+        <div>
+          <div>{{ process?.name | uppercase}}</div>
+          <div class="onlineInfo">
+            <div class="onlineStatus" [ngClass]="{'statusColorOnline': process.status === 'online','statusColorOffline': process.status !== 'online'}"></div>
+            <br> {{ process?.status | uppercase}}
+          </div>
+          <!-- <div>
+            Online for
+            <span>2 mins</span>
+          </div> -->
+        </div>
+        <div [routerLink]="[i]">
+          <div class="indic-text">CPU</div>
+          <div class="indic-val">{{process?.monit?.cpu | json}}%</div>
+        </div>
+        <div [routerLink]="[i]">
+          <div class="indic-text">MEM</div>
+          <div class="indic-val">{{(process?.monit?.memory/(1024*1024)) | number}} MB</div>
+        </div>
+        <div>
+          <div class="indic-text">Errors</div>
+          <div class="indic-val">0
+            <span>
+              <img src="/assets/images/error-triangle.svg">
+            </span>
+          </div>
+        </div>
+        <div>
+          <div class="indic-text">Restarts</div>
+          <div class="indic-val">{{process?.restart_time}}
+            <span>
+              <img src="/assets/images/refresh-button.svg">
+            </span>
+          </div>
+        </div>
+        <div>
+          <div class="indic-text">HTTP avg.</div>
+          <div class="indic-val">0ms</div>
+        </div>
+        <div>
+          <div class="indic-text">Processes</div>
+          <div class="indic-val">1
+            <span>
+              <img src="/assets/images/sitemap.svg">
+            </span>
+          </div>
+        </div>
+        <div>Versioning module and post-deployment reports not activated</div>
+      </div>
+    </div>
+
+    <div class="logDisplay">
+      <div class="logDisplayContent">
+        <div>
+          <div class="indic-text">HTTP</div>
+          <div class="indic-val">{{process?.HTTP?.value}}</div>
+        </div>
+        <div class="environment">
+          <div class="indic-text">
+            <img src="/assets/images/nodejs.png">
+          </div>
+          <div class="indic-val">Node Runtime</div>
+        </div>
+        <div>
+          <div class="indic-text">Loop Delay</div>
+          <div class="indic-val" style=" color: #ff2626;">{{process?.loopDelay?.value}}</div>
+        </div>
+        <div>
+          <div class="indic-text">Active Request</div>
+          <div class="indic-val">{{process?.activeRequests?.value}}</div>
+        </div>
+        <div>
+          <div class="indic-text">Active Handles</div>
+          <div class="indic-val">{{process?.loopDelay?.value}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- {{pm2Data.processes[1]['Active requests']['value']|json}} -->
+  <div id="container"></div>
+
+
+</div>

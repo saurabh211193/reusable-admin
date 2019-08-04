@@ -1,0 +1,63 @@
+<div class="componentsContainer">
+  <div class="listingContainer">
+    <div class="bucketListHead">
+      <div class="breadcrumb">
+        <span>
+          <img src="/assets/images/bucket.png">
+        </span>
+        <span style="text-transform: capitalize; margin-right: 8px;     margin-left: 3px;">{{bucket}} </span>
+        <span>
+          <img src="/assets/images/folder.png">
+        </span>
+        <span style="text-transform: capitalize; margin-left: 3px;"> {{directory}}</span>
+      </div>
+
+      <div class="upload_file">
+
+        <div class="uploadFiles">
+          <button class="block-btn" (click)="addFile()">Add File</button>
+          <!-- <input type="file" (change)="uploadFile($event)"> -->
+        </div>
+      </div>
+    </div>
+    <div class="searchBar">
+      <!-- <input type="text" name="" placeholder="Search for buckets"> -->
+    </div>
+
+    <div class="bucketList table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Folder Name</th>
+            <th>Size</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let folder of fileList">
+            <td class="text-wrap" (click)="getFileUrl(folder.Key)">
+              <span>
+                <img class="bucketImg" src="/assets/images/folder.png">
+              </span>
+              {{folder.key}}
+            </td>
+            <td>{{folder.Size /1000000 | number:'1.2-2'}} MB</td>
+            <td>
+              <button (click)="deleteFile(folder.Key)">
+                <img class="editIconImg" src="/assets/images/trash-can.svg">
+              </button>
+              <button (click)="editFile(folder.key)">
+                <img class="editIconImg" src="/assets/images/editIcon.svg">
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf="!fileList?.length">
+            <td colspan="3" style="text-align: center;">
+              <div>No Data Available</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

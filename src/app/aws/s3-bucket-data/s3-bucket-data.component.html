@@ -1,0 +1,42 @@
+<div class="componentsContainer">
+  <div class="listingContainer">
+    <div class="bucketListHead">
+      <span>
+        <img src="/assets/images/bucket.png">
+      </span>
+      <span style="text-transform: capitalize;">{{bucket}}</span>
+    </div>
+    <div class="searchBar">
+    </div>
+
+    <div class="bucketList table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Folder Name</th>
+            <th>Storage Class</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let folder of dirList">
+            <td class="text-wrap" [routerLink]="[folder.Prefix]">
+              <span>
+                <img class="bucketImg" src="/assets/images/folder.png">
+              </span>
+              {{folder.Prefix}}
+            </td>
+            <td>STANDARD</td>
+            <td>-</td>
+
+          </tr>
+          <tr *ngIf="!dirList?.length">
+            <td colspan="3" style="text-align: center;">
+              <div>No Data Available</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

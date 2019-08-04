@@ -1,0 +1,8 @@
+<div class="accordion">
+  <div (click)="toggleAccordion()">
+    <ng-content select="[accordion-header]"></ng-content>
+  </div>
+  <div class="accordion-body" [class.active]="active">
+    <ng-content select="[accordion-body]"></ng-content>
+  </div>
+</div>

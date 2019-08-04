@@ -1,0 +1,34 @@
+.credentials {
+  width: 481px;
+  padding: 20px 15px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  top: 80px!important;
+  transform: translateX(-30%)!important;
+}
+
+.credentials .form-group {
+  background-color: transparent;
+}
+
+.block-header {
+  border-bottom: 0px;
+  text-align: center;
+}
+
+.form-block {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.submitCredentials button {
+  background-color: #5d8fc2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 2px;
+}

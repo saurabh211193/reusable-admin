@@ -1,0 +1,35 @@
+<div class="componentsContainer">
+  <div class="credentials form-block">
+    <span class="block-header"> Enter Aws Credentials</span>
+    <form class="form-group" [formGroup]="awsConfigureForm" (submit)="configureAws()">
+      <app-affle-input>
+        <label label>Enter Access Key Id</label>
+        <input input type="text" placeholder="Please enter email" formControlName="accessKeyId">
+        <span error class="error" *ngIf="formErrors?.accessKeyId">
+          {{formErrors?.accessKeyId}}
+        </span>
+      </app-affle-input>
+
+      <app-affle-input>
+        <label label>Enter Secret Access Key</label>
+        <input input type="text" placeholder="Please enter password" formControlName="secretAccessKey">
+        <span error class="error" *ngIf="formErrors?.secretAccessKey">
+          {{formErrors?.secretAccessKey}}
+        </span>
+      </app-affle-input>
+
+      <app-affle-input>
+        <label label>Enter Region</label>
+        <input input type="text" placeholder="Please enter region" formControlName="region">
+        <span error class="error" *ngIf="formErrors?.region">
+          {{formErrors?.region}}
+        </span>
+      </app-affle-input>
+
+      <div class="submitCredentials">
+        <button>Submit</button>
+      </div>
+    </form>
+  </div>
+
+</div>

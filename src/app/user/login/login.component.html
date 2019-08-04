@@ -1,0 +1,45 @@
+<app-affle-header></app-affle-header>
+<div class="main-container">
+  <div class="form-block">
+    <form class="form-group" [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+      <span class="block-header">LOGIN</span>
+
+      <app-affle-input>
+        <label label>Enter Email</label>
+        <input input type="text" placeholder="Please enter email" formControlName="email">
+        <span error class="error" *ngIf="formErrors?.email">
+          {{formErrors?.email}}
+        </span>
+      </app-affle-input>
+
+      <app-affle-input>
+        <label label>Enter Password</label>
+        <input input type="password" placeholder="Please enter password" formControlName="pwd">
+        <span error class="error" *ngIf="formErrors?.pwd">
+          {{formErrors?.pwd}}
+        </span>
+      </app-affle-input>
+
+      <div class="clearfix login-block-container">
+        <div class="remember-me">
+
+          <!-- <app-affle-input> -->
+          <!-- <input type="checkbox" name="remember-me" id="remember-me" [(ngModel)]="data.rememberMe" [ngModelOptions]="{standalone: true}">
+          <span class="checkmark"></span>
+          <label for="remember-me">Remember Me</label> -->
+          <!-- </app-affle-input> -->
+
+          <!-- <a class="forgot-password" (click)="forgotPwd()">Forgot Password</a> -->
+        </div>
+        <div class="login-btn">
+          <a>
+            <button>Login</button>
+          </a>
+        </div>
+      </div>
+    </form>
+    <!-- <a class="sign-up">
+      <button routerLink="../register">Sign Up</button>
+    </a> -->
+  </div>
+</div>

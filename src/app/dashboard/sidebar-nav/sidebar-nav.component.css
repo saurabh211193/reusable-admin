@@ -1,0 +1,149 @@
+.sidebar-nav {
+  background-color: #fff;
+  width: 220px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 80px;
+  height: 100%;
+}
+
+.sidebar-nav ul li {
+  text-align: center;
+}
+
+.sidebar-nav ul li a {
+  display: block;
+  padding: 15px 0;
+  text-transform: capitalize;
+  color: #585858;
+  cursor: pointer;
+}
+
+.sidebar-nav ul li:hover a,
+.sidebar-nav ul li:active a,
+.sidebar-nav ul li.active a {
+  color: #266cad;
+}
+
+.sidebar-nav li.active>a:after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 4px;
+  border: 8px solid transparent;
+  border-width: 14px 10px;
+  border-right-color: #e0e0e0;
+}
+
+/* Accordion */
+
+.accordion {
+  background-color: transparent;
+  color: #444;
+  cursor: pointer;
+  padding: 11px 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.panel {
+  /* padding: 0 30px; */
+  /* display: none; */
+  /* background-color: rgba(221, 221, 221, 0.3); */
+  background-color: #f5f5f5;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.panel:hover {
+  /* color: #4B88B7; */
+  /* background-color: #F1F5F9; */
+  color: #000;
+}
+
+.panel>p {
+  padding: 10px 30px;
+  position: relative;
+  /* border-left: 1px dotted rgba(0, 0, 0); */
+  color: #000;
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+/* .panel>p:hover {
+  color: #4B88B7;
+} */
+
+.accordion img {
+  height: 12px;
+  float: right;
+}
+
+.accordion {
+  border-left: 3px solid transparent;
+}
+
+.accordion:hover {
+  color: #4B88B7;
+  background-color: #FAFAFA;
+  border-left: 3px solid;
+}
+
+.accordion.open,
+.accordion.open:focus {
+  background-color: #f5f5f5;
+  color: #585858;
+}
+
+.accordion.active {
+  color: #4B88B7;
+  background-color: #1268b317;
+}
+
+.subPannel {
+  margin-left: 3px;
+  font-weight: 500;
+}
+
+.subPannel:focus {
+  outline: none;
+}
+
+.subPannel.active {
+  /* color: #2B7DBC; */
+  background-color: #e9ecef;
+  /* font-weight: 700;
+  background-color: #f5f5f5 !important */
+}
+
+.panel.active>p {
+  border-color: #2B7DBC;
+}
+
+.panel.active p:before {
+  background-color: #2B7DBC
+}
+
+/* .panel p:before {
+  content: "";
+  display: block;
+  width: 10px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 22px;
+  border: 1px dotted;
+  border: 1px dotted rgba(0, 0, 0);
+} */

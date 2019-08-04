@@ -1,0 +1,31 @@
+.main-container {
+  width: 100%;
+  padding-top: 80px;
+  height: 100%;
+}
+
+.register-block .iAgree {
+  display: initial;
+}
+
+.register-block .remember-me {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.register-btn {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.register-btn button {
+  background-color: #5d8fc2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.register-btn button:hover{
+  background-color: #277ebd;
+}

@@ -1,0 +1,59 @@
+<div class="componentsContainer">
+  <div class="hoverlay ">
+    <div class="form-block modal-content">
+      <form class="form-group" [formGroup]="addObjectForm" (ngSubmit)="addEditSubmit()">
+        <div class="modal-header">
+          <h4 class="modal-title" *ngIf="!edit">Add File</h4>
+          <h4 class="modal-title" *ngIf="edit">Edit File</h4>
+          <button type="button" class="close" (click)="close()">&times;</button>
+        </div>
+        <div class="modal-body">
+
+          <div class="upload_file" *ngIf="!edit">
+            <div class="uploadFiles">
+              <label class="label">File</label>
+              <input type="file" (change)="uploadFile($event)">
+            </div>
+          </div>
+
+          <app-affle-input>
+            <label label>Name</label>
+            <input input type="text" placeholder="Please enter name" formControlName="name">
+          </app-affle-input>
+
+          <app-affle-input>
+            <label label>Passcode</label>
+            <input input type="text" placeholder="Please enter passcode" formControlName="passcode">
+            <span error class="error" *ngIf="formErrors?.passcode">
+              {{formErrors?.passcode}}
+            </span>
+          </app-affle-input>
+
+          <app-affle-input>
+            <label label>Version</label>
+            <input input type="text" placeholder="Please enter version" formControlName="version">
+          </app-affle-input>
+
+          <app-affle-input>
+            <label label>Image Id</label>
+            <input input type="text" placeholder="Please enter image" formControlName="image">
+          </app-affle-input>
+
+          <app-affle-input>
+            <label label>Currency</label>
+            <select input formControlName="currencySymbol" class="form-control">
+              <option value="">Select</option>
+              <option class='option' *ngFor='let option of currencies' [ngValue]="option.symbol">{{option.symbol}}</option>
+            </select>
+          </app-affle-input>
+
+
+        </div>
+        <div class="modal-footer ">
+          <button class="block-btn" type="submit" *ngIf="!edit">Submit</button>
+          <button class="block-btn" type="submit" *ngIf="edit">Edit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="componentsContainer">
+  <div class="listingContainer">
+    <div class="bucketListHead block-header">
+      <span>
+        <img src="/assets/images/aws-s3.svg">
+      </span>
+      <span>Amazon s3</span>
+    </div>
+    <div class="searchBar">
+      <!-- <input type="text" name="" placeholder="Search for buckets"> -->
+    </div>
+
+    <div class="bucketList table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th (click)="getBucketData()">Bicket Name</th>
+            <th>Region</th>
+            <th> Date Created</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-wrap" [routerLink]="['idex-backend']">
+              <span>
+                <img class="bucketImg" src="/assets/images/bucket.png">
+              </span>
+              Idex-Backend
+            </td>
+            <td>US East</td>
+            <td>23rd March</td>
+          </tr>
+          <!-- <tr>
+            <td colspan="3" style="text-align: center;">
+              <div>No Data Available</div>
+            </td>
+          </tr> -->
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

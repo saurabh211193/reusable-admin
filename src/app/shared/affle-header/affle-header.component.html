@@ -1,0 +1,18 @@
+<header class="navbar-header">
+  <div class="navbar-head">
+    <div class="logo">
+      <img src="/assets/images/logo.png">
+    </div>
+    <div class="userName" *ngIf="loggedIn" (click)="toggleDisplay()">
+      <div>
+        <img class="userPic" src="/assets/images/user.png">
+      </div>
+    </div>
+  </div>
+  <div class="dropdownContainer" *ngIf="loggedIn" #el>
+    <div class="dropdown-content">
+      <a class="Uname">{{userCredential.email}}</a>
+      <a class="logout_btn" (click)="logout()">Logout<img style="height:10px;" src="/assets/images/logout.png"> </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,57 @@
+<app-affle-header></app-affle-header>
+<div class="main-container">
+  <div class="form-block">
+    <form class="form-group" [formGroup]="registerForm" (ngSubmit)="registerSubmit()">
+      <span class="block-header">SIGNUP</span>
+
+
+
+      <app-affle-input>
+        <label label>Enter First Name</label>
+        <input input type="text" placeholder="Please enter first name" formControlName="fN">
+        <span error class="error" *ngIf="formErrors?.fN">
+          {{formErrors?.fN}}
+        </span>
+      </app-affle-input>
+
+      <app-affle-input>
+        <label label>Enter Last Name</label>
+        <input input type="text" placeholder="Please enter last name" formControlName="lN">
+        <span error class="error" *ngIf="formErrors?.lN">
+          {{formErrors?.lN}}
+        </span>
+      </app-affle-input>
+
+      <app-affle-input>
+        <label label>Enter Phone No.</label>
+        <input input type="text" placeholder="Please enter phone no." formControlName="pNo">
+        <span error class="error" *ngIf="formErrors?.pNo">
+          {{formErrors?.pNo}}
+        </span>
+      </app-affle-input>
+
+      <app-affle-input>
+        <label label>Enter Email</label>
+        <input input type="text" placeholder="Please enter email" formControlName="email">
+        <span error class="error" *ngIf="formErrors?.email">
+          {{formErrors?.email}}
+        </span>
+      </app-affle-input>
+
+      <app-affle-input>
+        <label label>Enter Password</label>
+        <input input type="password" placeholder="Please enter password" formControlName="pwd">
+        <span error class="error" *ngIf="formErrors?.pwd">
+          {{formErrors?.pwd}}
+        </span>
+      </app-affle-input>
+
+
+      <div class="register-btn">
+        <a>
+          <button type="submit">Sign Up</button>
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

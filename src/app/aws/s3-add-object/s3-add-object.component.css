@@ -1,0 +1,24 @@
+.uploadFiles input {
+  margin-top: 10px;
+  width: 288px;
+}
+
+.modal-footer button {
+  color: #fff !important;
+}
+
+.modal-content .form-group {
+  padding: 0px;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.label {
+  display: block;
+  margin: 5px 0;
+  font-weight: 600;
+  color: #666666;
+  font-size: 16px;
+}

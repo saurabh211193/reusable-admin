@@ -1,0 +1,149 @@
+.logContainer {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.logHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+.serverTitle {
+  font-size: 17px;
+}
+
+.serverTitle span img {
+  height: 15px;
+}
+
+.block-bar {
+  display: inline-block;
+  font-size: 15px;
+  padding: 5px 12px;
+  color: #fff;
+  background-color: rgba(18, 104, 179, 0.66);
+  border: 1px solid #1268B3;
+  line-height: 13px;
+  min-width: 200px;
+  text-align: center;
+}
+
+.block-btn {
+  background-color: #8b4947;
+  padding: 6px 20px;
+}
+
+.contentRow {
+  display: flex;
+}
+
+.contentRow>div {
+  border: 1px solid #1268B3;
+  color: #fff;
+  text-align: center;
+  flex: 1;
+  background-color: #1268b3e0;
+  padding: 20px;
+}
+
+.contentRow div:nth-of-type(8) {
+  flex: 3;
+}
+
+.contentRow div:nth-of-type(1) {
+  flex: 2;
+}
+
+.onlineInfo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.onlineStatus {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.statusColorOnline {
+  background-color: rgb(38, 224, 137);
+}
+
+.statusColorOffline {
+  background-color: rgb(224, 38, 38);
+}
+
+.indic-text {
+  margin-bottom: 20px;
+  font-size: 19px;
+}
+
+.indic-val {
+  font-size: 25px;
+  color: #26e089;
+}
+
+.indic-val img {
+  height: 20px;
+}
+
+/* .contentRow div:nth-of-type(1) {flex-grow: 3;}
+.contentRow div:nth-of-type(2) {flex-grow: 1;}
+.contentRow div:nth-of-type(3) {flex-grow: 1;}
+.contentRow div:nth-of-type(4) {flex-grow: 1;}
+.contentRow div:nth-of-type(5) {flex-grow: 1;}
+.contentRow div:nth-of-type(6) {flex-grow: 1;}
+.contentRow div:nth-of-type(7) {flex-grow: 1;}
+.contentRow div:nth-of-type(8) {flex-grow: 1;} */
+
+.logDisplay {
+  /* height: 200px;*/
+  /*margin-top: 2px;*/
+}
+
+.logDisplayContent {
+  /* height: 200px;*/
+  width: 66%;
+  display: flex;
+}
+
+.logDisplayContent>div {
+  border: 1px solid #1268B3;
+  color: #fff;
+  background-color: #1268b3e0;
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+}
+
+.environment .indic-text {
+  margin-bottom: 0px;
+}
+
+.environment .indic-val {
+  font-size: 15px;
+}
+
+.environment .indic-text img {
+  height: 45px;
+}
+
+.contentRow>div:hover,
+.logDisplayContent>div:hover {
+  background-color: #1268b3c9;
+  cursor: pointer;
+}
+
+.logActive {
+  background-color: #1268b3c9;
+}
+
+.logs-container #container {
+  margin-top: 10px;
+}
+
+/* .logDisplayContent div:nth-of-type(1) {flex: 1.5;}  */

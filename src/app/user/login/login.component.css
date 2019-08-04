@@ -1,0 +1,90 @@
+.main-container {
+  width: 100%;
+  padding-top: 80px;
+  height: 100%;
+}
+
+.forgot-password {
+  color: #277ebd;
+  font-weight: 500;
+  left: 18px;
+  position: relative;
+  top: -15px;
+  font-size: 14px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.remember-me {
+  width: 70%;
+  float: left;
+  font-size: 14px;
+  margin-top: -5px;
+  margin-left: -15px;
+}
+
+.remember-me label {
+  display: initial;
+  font-weight: normal;
+  position: relative;
+  padding-left: 27px;
+  font-size: 14px;
+}
+
+.checkmark {
+  position: relative;
+}
+
+.checkmark:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ADB8C0;
+  left: 0px;
+  top: -2px;
+  background-color: white;
+}
+
+.remember-me:hover .checkmark:before {
+  border-color: #FF893C;
+}
+
+.login-btn button {
+  background-color: #5d8fc2;
+  border: none;
+  color: white;
+  padding: 12px 128px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.login-btn button:hover {
+  background-color: #277ebd;
+}
+
+.sign-up {
+  margin-top: 20px;
+}
+
+.sign-up button {
+  width: 100%;
+  background-color: #555555;
+  font-weight: 600;
+  border: 0px;
+  font-size: 14px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  height: 32px;
+}
+
+.sign-up button:hover {
+  background-color: #303030;
+}
+
+.login-block-container {
+  margin-top: 30px;
+}

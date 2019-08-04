@@ -1,0 +1,17 @@
+<div class="sidebar-nav">
+  <app-accordion-container>
+    <app-accordion *ngFor="let option of dashboardOptions">
+      <button accordion-header class="accordion">{{option.value}}
+        <img src="/assets/images/down-arrow.svg">
+      </button>
+      <div accordion-body class="panel">
+        <!-- <p *ngFor="let subOption of option.subValue">
+          <span routerLink="{{option.id + '/'+subOption.id}}">{{subOption.value}}</span>
+        </p> -->
+        <p *ngFor="let subOption of option.subValue" class="subPannel" routerLink="{{option.id + '/'+subOption.id}}" routerLinkActive="active">
+          <span>{{subOption.value}}</span>
+        </p>
+      </div>
+    </app-accordion>
+  </app-accordion-container>
+</div>

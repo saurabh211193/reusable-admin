@@ -1,0 +1,11 @@
+<div class="alert-box-conatiner">
+  <div class="alert-box-content">
+    <div class="alert-box-message">
+      <div [innerHTML]="options.message"></div>
+    </div>
+    <div class="alert-content-button">
+      <button class="alert-ok-button block-btn" *ngIf="options.confirmText" (click)="confirm()">{{options?.confirmText}}</button>
+      <button class="alert-cancel-button block-btn" *ngIf="options.cancelText" (click)="close()">{{options?.cancelText}}</button>
+    </div>
+  </div>
+</div>

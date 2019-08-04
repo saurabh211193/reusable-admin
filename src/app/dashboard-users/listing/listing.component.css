@@ -1,0 +1,41 @@
+.listContent {
+  display: flex;
+  margin-top: 16px;
+  padding: 11px;
+}
+
+.listSearching,
+.listFilter {
+  width: 50%;
+}
+
+.userImage {
+  display: flex;
+  justify-content: center;
+}
+
+.userPic {
+  height: 60px;
+  width: 60px;
+  /*border: 1px solid #ddd;*/
+  border-radius: 50%;
+  /*background-image: url('/assets/images/user.png');*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.editIconImg {
+  height: 17px;
+}
+.text-wrapper{
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: 100px;
+}
+
+@media (max-width: 768px) {
+  .listingAddress {
+    white-space: nowrap;
+  }
+}

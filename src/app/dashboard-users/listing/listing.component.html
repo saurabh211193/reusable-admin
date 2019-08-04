@@ -1,0 +1,107 @@
+<div class="componentsContainer">
+  <div class="listingContainer col-md-12">
+    <div class="block-header col-md-12">List of Users</div>
+    <div class="listContent">
+      <div class="listSearching">
+        <!-- <form>
+          <div class="input-group ">
+            <input class="form-control" type="" name="" placeholder="Search Users by name">
+            <span class="input-group-btn">
+              <button class="block-btn">Search users</button>
+            </span>
+          </div>
+        </form> -->
+      </div>
+      <div class="listFilter">
+        <!-- <form>
+          <div class="input-group">
+            <select class="form-control">
+              <option value="volvo">User1</option>
+              <option value="saab">User2</option>
+              <option value="opel">User3</option>
+              <option value="audi">User4</option>
+            </select>
+            <span class="input-group-btn">
+              <button class="block-btn">Submit</button>
+            </span>
+          </div>
+        </form> -->
+      </div>
+    </div>
+    <div class="listTable table-responsive col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>S.no</th>
+            <!-- <th>User Id</th> -->
+            <th>User Name</th>
+            <th>Email Id</th>
+            <th>Mobile No.</th>
+            <!--  <th>Address</th> -->
+            <th>User Image</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList ; let i=index">
+            <td>{{i+1}}</td>
+            <!-- <td>101</td> -->
+            <td class="text-wrapper">{{user.fN}}</td>
+            <td style="max-width: 100px;">{{user.email}}</td>
+            <td>{{user.pNo}}</td>
+            <td class="userImage">
+              <div *ngIf="user.googleInfo?.img">
+                <img class="userPic" src="{{user.googleInfo?.img}}">
+              </div>
+              <div *ngIf="!user.googleInfo?.img">
+                <img class="userPic" src="/assets/images/user.png">
+              </div>
+            </td>
+            <td class="alignCntr" (click)="action()">
+              <button>
+                <img class="editIconImg" src="/assets/images/editIcon.svg">
+              </button>
+            </td>
+            <td class="alignCntr" (click)="action()">
+              <button>
+                <img class="editIconImg" src="/assets/images/trash-can.svg">
+              </button>
+            </td>
+          </tr>
+          <!-- <tr>
+            <td>1</td>
+            <td>101</td>
+            <td>Affle</td>
+            <td>affle@gmail.com</td>
+            <td>9123467678</td>
+            <td class="listingAddress">601 - 612, 6th Floor, Tower C, JMD Megapolis, Sohna Road, Sector-48, Gurugram, Haryana 122018</td>
+            <td class="userImage">
+              <div></div>
+            </td>
+            <td>
+              <a href="javascript:void(0)">
+                <img class="editIconImg" src="/assets/images/editIcon.svg">
+              </a>
+            </td>
+            <td>
+              <a href="javascript:void(0)">
+                <img class="editIconImg" src="/assets/images/trash-can.svg">
+              </a>
+            </td>
+          </tr>
+        -->
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <ul class="pagination">
+        <!-- <li *ngFor="let page of paginationData?.pageCount; let i = index;">
+          <a href="javascript:void(0)">{{i+1}}</a>
+        </li> -->
+        <!-- <li>
+          <a href="javascript:void(0)">&gt;</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</div>
